@@ -106,7 +106,7 @@ logging:
 ##Eureka 客户端配置
 eureka:
     instance:
-        ip-address: true
+        ip-address: false
         statusPageUrlPath: /actuator/info
         healthCheckUrlPath: /actuator/health
         home-page-url-path: /

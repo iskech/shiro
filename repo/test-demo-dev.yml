@@ -32,7 +32,7 @@ spring:
         testOnReturn: false
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
-        stream:
+    stream:
     #默认使用的中间件 rabbit/kafka
       defaultBinder: rabbit
       #绑定所需使用的通道

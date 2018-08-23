@@ -32,7 +32,49 @@ spring:
         testOnReturn: false
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
-        
+    cloud:
+      stream:
+              #默认使用的中间件 rabbit/kafka
+        defaultBinder: rabbit
+              #绑定所需使用的通道
+        bindings:
+              #出现错误的队列名
+          error:
+            destination: erabbitqueen
+                  #自定义的接口中的output通道名称
+          demo_output:
+              #对应于MQ就是 exchange
+            destination: demo_queen
+              #队列消息解析的格式
+            content-type: application/json
+          demo_input:
+            destination: demo_queen
+            content-type: appliction/json
+            group: xxxoo  #分组可以防止多服务同时消费该队列的消息 若分组则多服务轮询消费同一组下的同队列消息
+              #binder: defaultRabbit
+    #        output:
+    #          destination: rabbitqueen #对应于MQ就是 exchange
+    #          content-type: application/json
+    #          #binder: defaultRabbit
+            #自定义的接口中的output通道名称
+
+    #        input:
+    #          destination: rabbitqueen
+    #          content-type: appliction/json
+    #          group: xxxooo  #分组可以防止多服务同时消费该队列的消息 若分组则多服务轮询消费同一组下的同队列消息
+            #自定义的接口中的input通道名称
+
+          rabbit:
+            binder:
+              zkNodes: localhost
+              brokers: localhost
+
+        rabbitmq:
+          host: localhost
+          port: 5672
+          username: guest
+          password: guest
+
             
             
 ##mybatis配置
@@ -104,6 +146,7 @@ management:
     web:
       exposure:
             include: '*'
+
 
 
 

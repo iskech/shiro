@@ -1,0 +1,9 @@
+diff a/repo/test-demo-dev.yml b/repo/test-demo-dev.yml	(rejected hunks)
+@@ -1,6 +1,6 @@
+ 
+ server:
+-    port: 1000
++    port: 1223
+ 
+ spring:
+     # application:

@@ -106,7 +106,8 @@ logging:
 ##Eureka 客户端配置
 eureka:
     instance:
-        ip-address: 10.10.111.245
+        #ip-address: 10.10.111.245
+        prefer-ip-address: true
         statusPageUrlPath: /actuator/info
         healthCheckUrlPath: /actuator/health
         home-page-url-path: /

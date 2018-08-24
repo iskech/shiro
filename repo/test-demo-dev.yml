@@ -1,6 +1,6 @@
 
 server:
-    port: 1113
+    port: 1110
 
 spring:
     # application:

@@ -85,7 +85,7 @@ eureka:
         serviceUrl:
             defaultZone: http://localhost:8761/eureka/
 ribbon:
-  ReadTimeout: 5000
+  ReadTimeout: 10000
   ConnectTimeout: 5000 #负载连接超时阀值 超时会报异常
 
 #feign组件配置
@@ -105,7 +105,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 5000 #允许最大响 应超时时间5s
+            timeoutInMilliseconds: 10000 #允许最大响 应超时时间5s
           #隔离策略默认使用THREAD(即Hystrix熔断机制在新开的线程中执行) SEMApHORE(信号量 不开启新线程使用父线程)
           #官方推荐使用默认 线程隔离策略,性能较后者低但更安全.
           strategy: THREAD

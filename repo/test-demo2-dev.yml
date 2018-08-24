@@ -79,8 +79,8 @@ logging:
 
 eureka:
     instance:
-        ip-address: true
-        #prefer-ip-address: true
+        #ip-address: true
+        prefer-ip-address: true
         statusPageUrlPath: /actuator/info
         healthCheckUrlPath: /actuator/health
         home-page-url-path: /

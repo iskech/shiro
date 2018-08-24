@@ -109,6 +109,10 @@ hystrix:
           #隔离策略默认使用THREAD(即Hystrix熔断机制在新开的线程中执行) SEMApHORE(信号量 不开启新线程使用父线程)
           #官方推荐使用默认 线程隔离策略,性能较后者低但更安全.
           strategy: THREAD
-
+management:
+  endpoints:
+    web:
+      exposure:
+            include: '*'
 
 

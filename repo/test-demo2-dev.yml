@@ -74,6 +74,7 @@ redis:
 logging:
   level:
     com.csccloud.testdemo2: debug
+    com.csccloud.testdemo2.fein.FeignTestDemo: debug
 
 
 eureka:
